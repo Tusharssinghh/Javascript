@@ -1,0 +1,43 @@
+<!-- HTML DOM working... -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>DOM day-2</title>
+    </head>
+    <body style = "background-color: black; color: azure;">
+        <div class="parent">
+            <div class="day">Monday</div>
+            <div class="day">Tuesday</div>
+            <div class="day">Wednesday</div>
+            <div class="day">Thursday</div>
+            <div class="day">Friday</div>
+        </div>
+    </body>
+    <script>
+        const par = document.querySelector('.parent')
+        // console.log(par)
+        // console.log(par.children)
+        // console.log(par.children[0].innerHTML)
+
+        // for(let i=0; i<par.children.length; i++){
+        //     console.log(par.children[i].innerHTML)
+        // }
+        
+        par.children[1].style.color = "red";
+
+//parent to child select krenge..
+        // console.log(par.firstElementChild)
+        // console.log(par.lastElementChild)
+//selecting innerclasses..
+//discussion of node list
+        // const inclass = document.querySelector('.day')
+        // console.log(inclass)
+        // console.log(inclass.ParentElement)
+        console.log("Nodes are : ", par.childNodes)
+            
+
+
+    </script>
+</html>
