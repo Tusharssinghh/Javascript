@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style = "background : black; color :white ">
+    
+</body>
+<!--
+NodeList. A nodelist is a collection of document nodes which includes text nodes , attribute nodes and element nodes. A line break is also counted in nodelist but only first one. All subsequent line breaks are ignored by browser -->
+<script>
+    const div = document.createElement("div")
+    console.log(div)
+    div.className = "main"
+    // div.id = "myid"
+    div.id = Math.round(Math.random() * 10 + 1) 
+    div.setAttribute("title", "newtitle")
+    div.style.background = "red"
+    div.style.padding = "15px"
+    // div.innerText = "Tushar singh" //ye thoda jyada computational effort leta hai aur overwrite krta hai, so we use set attribute...
+//abhi ye memory mein hai..aab hum isse..page pr render krenge..
+    // div.innerText("Tushar Singh")
+    const text = document.createTextNode("Tushar Singh")
+    div.appendChild(text)
+    document.body.appendChild(div)
+</script>
+</html> 
