@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style = "background-color: #414141; color: aliceblue">
+    <h2>HTML Events</h2>
+    <div>
+        <ul id = "images">
+            <li><img width = "200px" id = "photoshop" src="https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg" alt="photoshop"></li>
+            <li><img width = "200px" id = "japan" src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" alt="" ></li>   <!--onclick="alert('Chamelion')"-->
+            <li><img width = "200px" id = "river" src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2020/05/Frame-9.png" alt=""></li>
+            <li><img width = "200px" id = "owl" src="https://cc-prod.scene7.com/is/image/CCProdAuthor/how_to_cut_out_images_photoshop_P1_mobile_360x270?$pjpeg$&jpegSize=200&wid=720" alt=""></li>
+            <li><img width = "200px" id = "prayer" src="https://d38b044pevnwc9.cloudfront.net/cutout-nuxt/enhancer/2.jpg" alt=""></li>
+            <li><a style = "color:aliceblue"href = "https://google.com" id = "google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('japan').onclick = function(){
+    //     alert('Hello')
+    // }
+
+    //attachEvent()
+    //jQuery - onclick
+
+    //type, timestamp,defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keycode
+
+    // document.getElementById('japan').addEventListener('click', function(e){
+    //     // alert('I am in japan')
+    //     console.log("I am in japan")
+    //     e.stopPropagation()
+        
+    // }, false)  
+    // //default false hota hai..aur isse bubbling khte hai..on the other side true..vala top to bottom chlta hai.. 
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     // alert('outer image')
+    //     console.log("outer images")
+    // }, false)
+
+    // //now let's see how to not navigate on different url's
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     console.log("Clicked on google")
+    //     e.stopPropagation()
+    //     e.preventDefault() //use to prevent render on different pages
+    // }, false)
+
+
+    //+++++++++++++++++++++++++++++++Now let's see how to remove image++++++++++++++++++++++++++++++++++++++++++++++++++++
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.parentNode)
+
+        if(e.target.tagName === "IMG"){
+            const imgrem = e.target.parentNode
+            imgrem.remove()
+        }
+        // imgrem.parentNode.removeChild(imgrem)    //this method is also used..
+        
+    }, false)
+
+
+</script>
+</html>
+
+<!-- In javascript events are run sequentially -->
