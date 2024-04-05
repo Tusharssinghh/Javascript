@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>DOM_5</title>
+    </head>
+    <body style = "background:black; color: white">
+        <ul class = "language">
+            <li>JavaScript</li>
+        </ul>
+    </body>
+    <script>
+    //    function addlanguage(langname){
+    //     const li = document.createElement('li')
+    //     li.innerHTML = `${langname}`
+    //     document.querySelector('.language').appendChild(li)
+    //    }
+    //    addlanguage("Java")
+
+//Now optimize approach...
+       function addoptilanguage(langname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+       }
+       addoptilanguage("Ruby")
+       addoptilanguage("TypeScript")
+
+//Now we learn how to edit values..
+       const seconditem = document.querySelector("li:nth-child(2)")
+    //    seconditem.innerHTML = "Java"
+       const newele = document.createElement('li')
+       newele.textContent = "java"
+       seconditem.replaceWith(newele)
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    //again do some editing..
+       const seclang = document.querySelector("li:nth-child(1)")
+    //    seclang.innerHTML="Python"
+       seclang.outerHTML = "<li>Python</li>"
+
+
+//Now we will learn how to remove element from the page..++++++++++++++
+       const lastchild = document.querySelector('li:last-child')
+       console.log(lastchild)
+       lastchild.remove()
+    </script>
+</html>
+
+<!-- function addlanguage(langname){
+    const li = document.createElement('li')
+    li.innerHTML = `${langname}`
+    document.querySelector('.language').appendChild(li)
+}
+
+addlanguage("Python")
+addlanguage("Ruby")
+
+//now optimize way..
+function addoptilanguage(langname){
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode(langname))
+    document.querySelector(".language").appendChild(li)
+}
+addoptilanguage("typescript") -->
