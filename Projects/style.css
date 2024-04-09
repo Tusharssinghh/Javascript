@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    color:white;
+    background-color: #2c2525;
+    padding: 0;
+}
+/* nav{
+    float: left;
+    
+} */
+header ::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+header{
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+    height: 4vh;
+    
+}
+#home{
+    color:khaki;
+}
+
+nav ul{
+    margin : 0;
+    padding: 0;
+}
+nav li{
+    display: inline-block;
+    margin-left: 25%;
+}
+nav a{
+    text-transform:uppercase;
+}
+main{
+    float: left;
+    margin-left: 15%;
+}
+div{
+    display:grid;
+}
+.project-link{
+    margin-bottom: 10%;
+    color:khaki;
+    border: 2px solid white;
+    padding: 10px;
+
+}
