@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body style = "background-color: #313131; color:white">
+    <h1>UP-14 Ghaziabad</h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    document.querySelector('#start').addEventListener('click', () => {
+        const func = function(){
+            console.log("Function execution starts", Date.now())
+        }
+        const last = setInterval(func, 1000)
+        document.querySelector('#stop').addEventListener('click', () => {
+            clearInterval(last)
+            console.log("function stop executing")
+        })
+    })
+</script>
+</html>
+
+
+
+<!-- document.querySelector('#start').addEventListener('click', function(){
+    const star = function(){
+        console.log("Start Execution")
+    }
+    const seti = setInterval(star, 1000)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(seti)
+        console.log("Stop Execution")
+    })
+}) -->
+
+
+
+
+
+<!-- ++++++++++++++++++setTimeout, clearTimeout+++++++++++++++ -->
